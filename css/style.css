@@ -387,9 +387,10 @@ textarea {
   border:6px solid red;
 }
 
-
 /*******************************************************************
-  Adaptación a pantallas    
+  Adaptación a móvil
+
+     https://www.youtube.com/watch?v=f7QujqArvIw
 *******************************************************************/ 
 
 @media (max-width: 800px) {
@@ -408,7 +409,7 @@ textarea {
 
     nav {
       position: fixed;
-      top: calc(5% + var(--movil-arriba));
+      top: calc(30px + var(--movil-arriba));
       width: 100vw;
       display:flex;
       flex-direction: column;

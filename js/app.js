@@ -1,3 +1,5 @@
+let nav = document.querySelector("nav");
+
 // Botones para seleccionar el contenido
 
 let secciones = document.querySelectorAll("section");
@@ -12,6 +14,7 @@ botonesDeContenido[0].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "";
     botonesDeContenido[2].className = "";
     botonesDeContenido[3].className = "";
+    nav.className = "invisible";
 });
 
 botonesDeContenido[1].addEventListener("click", function(ev){
@@ -23,6 +26,7 @@ botonesDeContenido[1].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "boton-activado";
     botonesDeContenido[2].className = "";
     botonesDeContenido[3].className = "";
+    nav.className = "invisible";
 });
 
 botonesDeContenido[2].addEventListener("click", function(ev){
@@ -34,6 +38,7 @@ botonesDeContenido[2].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "";
     botonesDeContenido[2].className = "boton-activado";
     botonesDeContenido[3].className = "";
+    nav.className = "invisible";
 });
 
 botonesDeContenido[3].addEventListener("click", function(ev){
@@ -45,8 +50,8 @@ botonesDeContenido[3].addEventListener("click", function(ev){
   botonesDeContenido[1].className = "";
   botonesDeContenido[2].className = "";
   botonesDeContenido[3].className = "boton-activado";
+  nav.className = "invisible";
 });
-
 
 // Botones para seleccionar el tema
 
@@ -57,14 +62,15 @@ botonesDeTema[0].addEventListener("click", function(ev){
     botonesDeTema[0].className = "boton-activado";
     botonesDeTema[1].className = "";
     botonesDeTema[2].className = "";
+    nav.className = "invisible";
 });
-
 
 botonesDeTema[1].addEventListener("click", function(ev){
     document.body.className = "tema2";
     botonesDeTema[0].className = "";
     botonesDeTema[1].className = "boton-activado";
     botonesDeTema[2].className = "";
+    nav.className = "invisible";
 });
 
 botonesDeTema[2].addEventListener("click", function(ev){
@@ -72,6 +78,7 @@ botonesDeTema[2].addEventListener("click", function(ev){
     botonesDeTema[0].className = "";
     botonesDeTema[1].className = "";
     botonesDeTema[2].className = "boton-activado";
+    nav.className = "invisible";
 });
 
 // Selector de tarjeta
@@ -97,7 +104,6 @@ selectorDeTarjeta.addEventListener("change", function(ev){
     }
   }
 });
-
 
 // Notificar error de contenido del input
 
@@ -128,6 +134,21 @@ mensaje.addEventListener("focusout", function(ev){
   }
   else {
     mensaje.className = "incorrecto";
+  }
+});
+
+
+// Botón mostrar nav en móvil
+
+let botonMostrarNav = document.querySelector("#boton-mostrar-nav");
+
+botonMostrarNav.addEventListener("click", function(ev){
+console.log(ev);
+  if ("invisible" == nav.className ) {
+    nav.className = "visible";
+  }
+  else {
+    nav.className = "invisible";
   }
 });
 
