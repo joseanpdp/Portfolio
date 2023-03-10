@@ -296,6 +296,16 @@ section:nth-of-type(2) > #perfil {
     align-items: center;
   }
 
+  select {
+    font-size: 1em;
+    text-align: center;
+    background-color: var(--color-seleccionado);
+    color: var(--color-normal);
+    border: 2px solid var(--color-header);
+    border-radius: 20px;
+    padding: 1%;
+  }
+
   #contenedor-tarjetas {
     padding: 5%;
   }

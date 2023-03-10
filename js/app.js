@@ -1,4 +1,4 @@
-// Botones de contenido
+// Botones para seleccionar el contenido
 
 let secciones = document.querySelectorAll("section");
 let botonesDeContenido = document.querySelectorAll("#menu-contenidos > p");
@@ -12,7 +12,6 @@ botonesDeContenido[0].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "";
     botonesDeContenido[2].className = "";
     botonesDeContenido[3].className = "";
-    nav.className = "invisible";
 });
 
 botonesDeContenido[1].addEventListener("click", function(ev){
@@ -76,5 +75,29 @@ botonesDeTema[2].addEventListener("click", function(ev){
     botonesDeTema[0].className = "";
     botonesDeTema[1].className = "";
     botonesDeTema[2].className = "boton-activado";
+});
+
+// Selector de tarjeta
+
+let tarjetas = document.querySelectorAll("div.tarjeta")
+let selectorDeTarjeta = document.querySelector("select");
+
+selectorDeTarjeta.addEventListener("change", function(ev){
+  let value = selectorDeTarjeta.value.toLowerCase();
+  if ("" === value) {
+    for (let tarjeta of tarjetas) {
+      tarjeta.classList.remove("invisible");
+    }
+  }
+  else {
+    for (let tarjeta of tarjetas) {
+      if (tarjeta.classList.contains(value)) {
+         tarjeta.classList.remove("invisible");
+      }
+      else {
+        tarjeta.classList.add("invisible");
+      }
+    }
+  }
 });
 
