@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Este es mi portfolio personal">
+  <meta name="keywords" content="html, css, js, portfolio, proyectos">
+  <meta name="language" content="ES">
+  <meta name="author" content="joseantonio.perezdeprada@a.vedrunasevillasj.es">
+  <meta name="robots" content="index,follow">
+  <meta name="revised" content="Thursday, March 8th, 2023, 8:30am">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="js/app.js" defer></script>
+
+  <link rel="shortcut icon" href="media/icon/favicon.png" type="image/xpng">
+
+  <title>Jose's Portfolio</title>
+
+</head>
+
+
+<body class="tema1">
+  <header>
+    <h1>Jose's Portfolio</h1>
+    <p id="boton-mostrar-nav">Menu</p>
+  </header>
+  <nav class="invisible">
+    <div id="menu-contenidos">
+      <p class="boton-activado">Introducción</p>
+      <p>Sobre mí</p>
+      <p>Portfolio</p>
+      <p>Contacto</p>
+    </div>
+  </nav>
+
+  <main>
+    <section class="visible">
+      <h2>
+        ¡Bienvenido a mi portfolio!
+      </h2>
+    </section>
+    <section class="visible" id="intro">
+      <p>
+        Me llamo José Antonio y soy estudiante de desarrollo de aplicaciones multiplataforma. En mi primer curso estoy aprendiendo a programar con Java, 
+        manejar bases de datos MySQL y a montar páginas web como este portfolio. 
+      </p>
+      <img id="perfil" src="media/perfil.jpg">
+    </section>
+    <section class="invisible">
+      <div class="listas">
+        <h3>Estudios</h3>
+        <div>
+          <ul>
+            <li>Bachillerato</li>
+            <li>Formación Profesional</li>
+          </ul>
+        </div>
+      </div>
+      <div class="listas">
+        <h3>Habilidades</h3>
+        <div>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>XML</li>
+          </ul>
+          <ul>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Go</li>
+          </ul>
+          <ul>
+            <li>SQL</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+          <ul>	
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Vim</li>
+          </ul>
+        </div>
+      </div>
+      <div class="listas">
+        <h3>Herramientas</h3>
+        <div>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>IntelliJ</li>
+            <li>MySQL Workbench</li>
+          </ul>
+          <ul>	
+            <li>Vim</li>
+            <li>Firefox</li>
+            <li>Opera</li>
+          </ul>
+        </div>
+      </div>
+      <div class="listas">
+        <h3>Idiomas</h3>
+        <div>
+          <ul>
+            <li>Español</li>
+            <li>Inglés</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="invisible">
+      <h3 style="text-align:center">Portfolio</h3>
+      <div id="contenedor-tarjetas">
+        <div class="tarjeta html css javascript">
+          <h4>HTML, CSS Y JS</h4>
+          <p>
+            Portfolio (2º Trimestre)
+          </p>
+          <p>
+            Portfolio (1º Trimestre)
+          </p>
+        </div>
+        <div class="tarjeta xml">
+          <h4>XML</h4>
+          <p>
+            Examen Marcas (2º Trimestre)
+          </p>
+        </div>
+        <div class="tarjeta java">
+          <h4>JAVA</h4>
+          <p>
+            Corre Timmy
+          </p>
+          <p>
+            Calculadora
+          </p>
+          <p>
+            Proyecto 360º
+          </p>
+        </div>
+        <div class="tarjeta javascript">
+          <h4>JS</h4>
+          <p>
+            Portfolio (2º Trimestre)
+          </p>
+          <p>
+            Calculadora
+          </p>
+        </div>
+        <div class="tarjeta html">
+          <h4>HTML</h4>
+          <p>
+            Examen Marcas (1º Trimestre)
+          </p>
+          <p>
+            Proyecto 360º
+          </p>
+        </div>
+        <div class="tarjeta css">
+          <h4>CSS</h4>
+          <p>
+            Proyecto 360º
+          </p>
+        </div>
+        <div class="tarjeta uml">
+          <h4>UML</h4>
+          <p>
+            Proyecto 360º
+          </p>
+        </div>
+        <div class="tarjeta xsd">
+          <h4>XSD</h4>
+          <p>
+            Examen Marcas (2º Trimestre)
+          </p>
+        </div>
+    </section>
+    <section class="invisible" id="contacto">
+      <h3>Contacto</h3>
+      <form id="formulario-contacto">
+        <label>De</label>
+        <input type="email" class="texto"/>
+        <label>Para</label>
+        <input type="email" class="texto"/>
+        <textarea></textarea>
+        <input type="button" class="boton" value="Enviar"/>
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="js/app.js"></script>
+ </body>
+
+</html>
