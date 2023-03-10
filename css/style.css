@@ -2,6 +2,11 @@
   Configuración
 *******************************************************************/ 
 
+body {
+   --movil-arriba: 4vh;
+   --movil-abajo: calc(100vh - var(--movil-arriba));
+}
+
 body.tema1 {
    --color-normal:  rgb(255, 255, 255);
    --color-fondo:   rgb(8, 79, 58);
@@ -118,15 +123,6 @@ nav {
     display:flex;
     justify-content:flex-end;
   }
-
-  /*
-  #menu-contenidos > p. {
-    text-decoration:none;
-    display: block;
-    color: var(--color-normal);
-    padding: 1% 1%;
-  }
-  */
 
   /*
     Botones de tema
@@ -383,3 +379,69 @@ textarea {
   border-radius: 20px;
 }
 
+#formulario-contacto .correcto {
+  border:6px solid green;
+}
+
+#formulario-contacto .incorrecto {
+  border:6px solid red;
+}
+
+
+/*******************************************************************
+  Adaptación a pantallas    
+*******************************************************************/ 
+
+@media (max-width: 800px) {
+
+    header {
+      position: fixed;
+      top: 0px;
+      height: var(--movil-arriba);
+      padding: 5%;
+      /*background-color: ;*/
+    } 
+
+    #boton-mostrar-nav {
+      display: block;
+    }
+
+    nav {
+      position: fixed;
+      top: calc(5% + var(--movil-arriba));
+      width: 100vw;
+      display:flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      text-align: center;
+      transition: left 1s;
+    }
+
+    nav.visible {
+      left: 0vw;
+    }
+
+    nav.invisible {
+      left: -100vw;
+    }
+
+    #menu-temas {
+      display:flex;
+      flex-direction: row;
+      justify-content:center;
+    }
+
+    #menu-contenidos {
+      display:flex;
+      flex-direction: column;
+      justify-content:flex-start;
+    }
+
+    section {
+      margin-top: 20%;
+    }
+
+    section:nth-of-type(2) {
+      display: none;
+    }
+}

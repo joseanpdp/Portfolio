@@ -23,7 +23,6 @@ botonesDeContenido[1].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "boton-activado";
     botonesDeContenido[2].className = "";
     botonesDeContenido[3].className = "";
-    nav.className = "invisible";
 });
 
 botonesDeContenido[2].addEventListener("click", function(ev){
@@ -35,7 +34,6 @@ botonesDeContenido[2].addEventListener("click", function(ev){
     botonesDeContenido[1].className = "";
     botonesDeContenido[2].className = "boton-activado";
     botonesDeContenido[3].className = "";
-    nav.className = "invisible";
 });
 
 botonesDeContenido[3].addEventListener("click", function(ev){
@@ -47,7 +45,6 @@ botonesDeContenido[3].addEventListener("click", function(ev){
   botonesDeContenido[1].className = "";
   botonesDeContenido[2].className = "";
   botonesDeContenido[3].className = "boton-activado";
-  nav.className = "invisible";
 });
 
 
@@ -98,6 +95,39 @@ selectorDeTarjeta.addEventListener("change", function(ev){
         tarjeta.classList.add("invisible");
       }
     }
+  }
+});
+
+
+// Notificar error de contenido del input
+
+let remitente = document.querySelector("input:nth-of-type(1)");
+remitente.addEventListener("focusout", function(ev){
+  if ( remitente.value != "" ) {
+    remitente.className = "correcto";
+  }
+  else {
+    remitente.className = "incorrecto";
+  }
+});
+
+let asunto = document.querySelector("input:nth-of-type(2)");
+asunto.addEventListener("focusout", function(ev){
+  if ( asunto.value != "" ) {
+    asunto.className = "correcto";
+  }
+  else {
+    asunto.className = "incorrecto";
+  }
+});
+
+let mensaje = document.querySelector("textarea");
+mensaje.addEventListener("focusout", function(ev){
+  if ( asunto.value != "" ) {
+    mensaje.className = "correcto";
+  }
+  else {
+    mensaje.className = "incorrecto";
   }
 });
 
