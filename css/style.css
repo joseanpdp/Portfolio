@@ -1,3 +1,40 @@
+/*******************************************************************
+  Configuración
+*******************************************************************/ 
+
+body.tema1 {
+   --color-normal:  rgb(255, 255, 255);
+   --color-fondo:   rgb(8, 79, 58);
+   --color-enfasis: #fff700;
+   --color-nav:     rgb(14, 142, 67);
+   --color-tarjeta: rgb(14, 142, 104);
+   --color-header: rgb(13, 123, 59);
+   --color-seleccionado: rgb(8, 73, 35);
+   --color-sombra: rgb(56, 247, 142);
+}
+
+body.tema2 {
+  --color-normal:  rgb(255, 255, 255);
+   --color-fondo:   rgb(8, 44, 79);
+   --color-enfasis: #fff700;
+   --color-nav:     rgb(14, 40, 142);
+   --color-tarjeta: rgb(14, 27, 142);
+   --color-header: rgb(17, 54, 156);
+   --color-seleccionado: rgb(8, 22, 73);
+   --color-sombra: rgb(91, 135, 255);
+}
+
+body.tema3 {
+  --color-normal:  rgb(255, 255, 255);
+   --color-fondo:   rgb(79, 8, 8);
+   --color-enfasis: #fff700;
+   --color-nav:     rgb(142, 14, 14);
+   --color-tarjeta: rgb(142, 14, 14);
+   --color-header: rgb(109, 11, 11);
+   --color-seleccionado: rgb(73, 8, 8);
+   --color-sombra: rgb(247, 56, 56);
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -11,18 +48,6 @@ h1, h2, h3, h4, h5, b, strong {
 /*******************************************************************
   body, header, main, footer
 *******************************************************************/ 
-
-
-body {
-   --color-normal:  rgb(255, 255, 255);
-   --color-fondo:   rgb(8, 79, 58);
-   --color-enfasis: #fff700;
-   --color-nav:     rgb(14, 142, 67);
-   --color-tarjeta: rgb(14, 142, 104);
-   --color-header: rgb(13, 123, 59);
-   --color-seleccionado: rgb(8, 73, 35);
-   --color-sombra: rgb(56, 247, 142);
-}
 
 body {
   background-color: var(--color-fondo);
@@ -82,11 +107,40 @@ nav {
 }
 
 
+  #menu-temas {
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+  }
+
   #menu-contenidos {
     width:100%;
     display:flex;
     justify-content:flex-end;
   }
+
+  /*
+  #menu-contenidos > p. {
+    text-decoration:none;
+    display: block;
+    color: var(--color-normal);
+    padding: 1% 1%;
+  }
+  */
+
+  /*
+    Botones de tema
+  */ 
+
+    #menu-temas > p {
+      transition: background-color 1s, color 1s;
+      padding: 1% 1%;
+    }
+
+    #menu-temas > p.boton-activado {
+      background-color: var(--color-seleccionado);
+      color: var(--color-normal);
+    }
 
   /*
     Botones de contenido
@@ -236,6 +290,12 @@ section:nth-of-type(2) > #perfil {
     display: none !important;
   }
 
+  #selector-portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #contenedor-tarjetas {
     padding: 5%;
   }
@@ -312,3 +372,4 @@ textarea {
   border: 2px solid var(--color-header);
   border-radius: 20px;
 }
+
