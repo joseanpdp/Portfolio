@@ -23,5 +23,11 @@ Este archivo se divide en 5 partes:
     - En esta parte, hacemos lo mismo, pero tan solo creamos una variable llamada **botonesDeTema** que almacena aquellos elementos *p* contenidos en la etiqueta cuyo id es *menu-temas*.
     - Usamos la función **addEventListener** sobre **botonesDeTema**, para que, al hacer click, una de las secciones almacenadas en la variable **secciones** tenga una clase llamada ***boton-activado***, mientras que las demás, no tendrán ninguna clase. Esta clase lo que hará es cambiar la paleta de colores definida en el archivo **style.css**.
 3. Selector de tarjeta
-4. Botón mostrar nav en móvil
-5. Notificar error de contenido del input
+    - Al contrario que en los casos anteriores, cada tarjeta puede tener varias clases que indican distintos tipos de lenguajes.
+    - En este caso, lo que hacemos es emplear el atributo **classList** que es una lista con las clases del elemento. Con sus métodos **add** y **remove**, lo que hacemos es colocar la clase **invisible** cuando es necesario.
+4. Notificar error de contenido del input
+    - Se verifica que los input y el textarea del formulario de **contacto** no están vacíos.
+5. Botón mostrar nav en móvil
+    - Para que se adapte a la pantalla del móvil, el css tiene una media query que oculta la barra de navegación.
+    - Con esta parte del archivo **app.js**, lo que hacemos es modificar la clase de la barra de navegación de **invisible** a **visible** cuando se pulsa un botón.
+    - La documentación que he utilizado para esta parte la he extraído de este [vídeo](https://www.youtube.com/watch?v=f7QujqArvIw).
