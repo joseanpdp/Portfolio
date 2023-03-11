@@ -380,11 +380,11 @@ textarea {
 }
 
 #formulario-contacto .correcto {
-  border:6px solid green;
+  border:6px solid rgb(0, 255, 0);
 }
 
 #formulario-contacto .incorrecto {
-  border:6px solid red;
+  border:6px solid rgb(255, 41, 173);
 }
 
 /*******************************************************************

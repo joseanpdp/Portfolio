@@ -129,7 +129,7 @@ asunto.addEventListener("focusout", function(ev){
 
 let mensaje = document.querySelector("textarea");
 mensaje.addEventListener("focusout", function(ev){
-  if ( asunto.value != "" ) {
+  if ( mensaje.value != "" ) {
     mensaje.className = "correcto";
   }
   else {
